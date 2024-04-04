@@ -9,7 +9,6 @@ const getRecommendations = async (genre, time) => {
     );
 
     const userTimezone = moment.tz.guess();
-    const currentTime = moment().tz(userTimezone);
     const formattedTime = moment(time, "HH:mm")
       .add(30, "minutes")
       .tz(userTimezone)
